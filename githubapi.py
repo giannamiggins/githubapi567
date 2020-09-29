@@ -46,7 +46,7 @@ def getRepos():
     print(output)
     return output
 
-#when commits are over 30, it defaults to 30... json cannot hold more??
+#when commits are over 30, it defaults to 30
 class TestGitRepos(unittest.TestCase):
     def testGiannaRepo(self):
         self.assertEqual(getRepos(), {'FocusTheHedgehog': 30, 'GEDCOM_Project': 30, 'helloworld': 1, 'magicdeck': 30, 'twitterAPI': 2})
