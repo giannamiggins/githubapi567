@@ -1,8 +1,10 @@
 import json, requests
 import unittest
+from unittest import mock
 
 #gianna miggins
 #SSW 567 Homework 4a 
+#Homework 5a Mocking branch
 
 def getRepos(user):
     #input github username
@@ -48,8 +50,8 @@ def getRepos(user):
 
 #when commits are over 30, it defaults to 30
 class TestGitRepos(unittest.TestCase):
-    #def testGiannaRepo(self):
-        #self.assertEqual(getRepos('giannamiggins'), {'FocusTheHedgehog': 30, 'GEDCOM_Project': 30, 'githubapi567': 15, 'helloworld': 1, 'magicdeck': 30, 'twitterAPI': 2})
+    def testGiannaRepo(self):
+        self.assertEqual(getRepos('giannamiggins'), {'FocusTheHedgehog': 30, 'GEDCOM_Project': 30, 'githubapi567': 15, 'helloworld': 1, 'magicdeck': 30, 'twitterAPI': 2})
     def testJasonRepo(self):
         self.assertEqual(getRepos('richkempinski'), {'csp': 2, 'hellogitworld': 30, 'helloworld': 6, 'Mocks': 10, 'Project1': 2, 'richkempinski.github.io': 9, 'threads-of-life': 1, 'try_nbdev': 2, 'try_nbdev2': 5})
     #if you do not have this specific information but know it for one repo, testing should be different
