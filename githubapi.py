@@ -55,8 +55,3 @@ class TestGitRepos(unittest.TestCase):
     def testJasonRepo(self):
         self.assertEqual(getRepos('richkempinski'), {'csp': 2, 'hellogitworld': 30, 'helloworld': 6, 'Mocks': 10, 'Project1': 2, 'richkempinski.github.io': 9, 'threads-of-life': 1, 'try_nbdev': 2, 'try_nbdev2': 5})
     #if you do not have this specific information but know it for one repo, testing should be different
-
-
-if __name__ == '__main__':
-
-    unittest.main(exit=False)
